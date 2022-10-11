@@ -28,7 +28,7 @@ L.ScaleHandle = L.EditHandle.extend({
     let corner2 = map.latLngToLayerPoint(overlay.getCorner(1));
     let w = Math.abs(corner1.x - corner2.x);
     let h = Math.abs(corner1.y - corner2.y);
-    const distance = Math.sqrt(w * w + h * h);
+    let distance = Math.sqrt(w * w + h * h);
 
     if (distance > edgeMinWidth || scale > 1) {
       overlay.scaleBy(scale);
