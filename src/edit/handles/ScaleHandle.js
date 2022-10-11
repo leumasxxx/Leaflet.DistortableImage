@@ -25,7 +25,7 @@ L.ScaleHandle = L.EditHandle.extend({
 
     if (!edgeMinWidth) { edgeMinWidth = 50; } /* just in case */
     const corner1 = map.latLngToLayerPoint(overlay.getCorner(0));
-    const corner2 = map.latLngToLayerPoint(overlay.getCorner(1));
+    let corner2 = map.latLngToLayerPoint(overlay.getCorner(1));
     let w = Math.abs(corner1.x - corner2.x);
     let h = Math.abs(corner1.y - corner2.y);
     const distance = Math.sqrt(w * w + h * h);
